@@ -1,4 +1,10 @@
-<style>
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evaltics</title>
+ <style>
   :root {
     --bg-light: #ffffff;
     --text-light: #000000;
@@ -75,3 +81,24 @@
     border: 1px solid #fff;
   }
 </style>
+</head>
+<body>
+  <button class="toggle" onclick="toggleTheme()">Toggle Theme</button>
+  <h1>Evaltics</h1>
+  <p>Auditing the machine. Trust, traced.</p>
+
+  <form name="waitlist" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="waitlist">
+    <input type="email" name="email" placeholder="Your email" required />
+    <button type="submit">Join Waitlist</button>
+  </form>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute("data-theme");
+      html.setAttribute("data-theme", current === "dark" ? "light" : "dark");
+    }
+  </script>
+</body>
+</html>
