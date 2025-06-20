@@ -19,39 +19,50 @@
     background-color: var(--bg-dark);
     color: var(--text-dark);
   }
-  body {
-    font-family: system-ui, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  html, body {
+
     margin: 0;
-    padding: 1rem;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-  }
-  p {
-    font-size: 1.2rem;
-    opacity: 0.7;
-  }
-  form {
-    margin-top: 2rem;
+    padding: 0;
+    min-height: 100vh;
+    font-family: "Inter", system-ui, sans-serif;
+    background-color: var(--bg);
+    color: var(--fg);
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    align-items: center;
-  }
-  input[type="email"] {
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    width: 250px;
-  }
+    transition: background-color 0.3s, color 0.3s;
+  }  
+   main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+ .container {
+      max-width: var(--max-width);
+      width: 100%;
+      text-align: center;
+    }
+  h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      margin: 0 0 1rem;
+      color: #fff;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--accent);
+      margin: 0 0 2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: var(--fg);
+      margin: 1rem 0;
+    }
   button {
     padding: 0.5rem 1rem;
     font-size: 1rem;
@@ -80,27 +91,51 @@
     color: #000;
     border: 1px solid #fff;
   }
+ footer {
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+
+  @media (max-width: 600px) {
+      h1 {
+        font-size: 2.4rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
 </style>
 </head>
 <body>
+<main>
+  <div class="container">
+    <h1>Evaltics</h1>
+    <h2>Operational & Ethical Assurance for AI Systems</h2>
 
-  <h1>Evaltics</h1>
-  <h2>Operational & Ethical Assurance for AI Systems</h2>
+    <p>
+        Investors are betting on AI. Regulators are catching up. Users are watching closely.
+      </p>
+      <p>
+        Evaltics ensures your models do what they’re supposed to—and <em>nothing else</em>.
+        We validate intent, detect misbehavior, and provide auditable guarantees that your systems
+        function as claimed.
+      </p>
+      <p>
+        Because “trust us” isn’t a strategy.
+      </p>
+    </div>
+</main>
 
-  <p>
-    Investors are betting on AI. Regulators are catching up. Users are watching closely.
-    <br><br>
-    Evaltics ensures your models do what they’re supposed to—and <em>nothing else</em>.
-    We validate intent, detect misbehavior, and provide auditable guarantees that your systems function as claimed.
-    <br><br>
-    Because "trust us" isn't a strategy.
-  </p>
-
-  <footer>
-    © 2025 Evaltics. Behavioral assurance for machine intelligence.
-  </footer>
+<footer>
+  © 2025 Evaltics. Behavioral assurance for machine intelligence.
+</footer>
   
-  <button class="toggle" onclick="toggleTheme()">Toggle Theme</button>
+<button class="toggle" onclick="toggleTheme()">Toggle Theme</button>
 <!--   <h1>Evaltics</h1> -->
 <!--   <p>Auditing the machine. Trust, traced.</p> -->
 
